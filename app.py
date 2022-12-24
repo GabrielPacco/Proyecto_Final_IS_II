@@ -31,7 +31,7 @@ def Index():
 
 
 @app.route('/login', methods=['GET','POST'])
-def Login():
+def login():
     if request.method == 'POST':
         
         correo = request.form['typeEmailX']

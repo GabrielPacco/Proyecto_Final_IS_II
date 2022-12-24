@@ -30,13 +30,16 @@ mysql.init_app(app)
 def Index():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('home.html', eventos=response)
-
 @app.route('/login')
 def login():
     return render_template('login.html')
 
 @app.route('/validate_login', methods = ['POST'])
 def validate_login():
+
+@app.route('/login', methods=['GET','POST'])
+def login(): #cambio refactoring
+>>>>>>> 408661356ca7c3e7598f33249dfc8bc0a559c4ba
     if request.method == 'POST':
         correo = request.form['typeEmailX']
         password = request.form['typePasswordX']

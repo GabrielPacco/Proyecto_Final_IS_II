@@ -30,8 +30,7 @@ def Index():
     return render_template('home.html', eventos=response)
 
 #areasda
-#areasda
-#areasda
+
 
 @app.route('/login', methods=['GET','POST'])
 def Login():

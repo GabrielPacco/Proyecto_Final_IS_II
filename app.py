@@ -29,7 +29,10 @@ def Index():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('home.html', eventos=response)
 
-#are
+#areasda
+#areasda
+#areasda
+
 @app.route('/login', methods=['GET','POST'])
 def Login():
     if request.method == 'POST':

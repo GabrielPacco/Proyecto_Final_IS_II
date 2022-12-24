@@ -36,10 +36,6 @@ def login():
 
 @app.route('/validate_login', methods = ['POST'])
 def validate_login():
-
-@app.route('/login', methods=['GET','POST'])
-def login(): #cambio refactoring
->>>>>>> 408661356ca7c3e7598f33249dfc8bc0a559c4ba
     if request.method == 'POST':
         correo = request.form['typeEmailX']
         password = request.form['typePasswordX']

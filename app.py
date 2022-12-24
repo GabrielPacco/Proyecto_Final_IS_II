@@ -30,6 +30,7 @@ mysql.init_app(app)
 def Index():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('home.html', eventos=response)
+    
 @app.route('/login')
 def login():
     return render_template('login.html')

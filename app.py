@@ -33,7 +33,7 @@ def Index():
 
 
 @app.route('/login', methods=['GET','POST'])
-def Login():
+def login(): #cambio refactoring
     if request.method == 'POST':
         
         correo = request.form['typeEmailX']

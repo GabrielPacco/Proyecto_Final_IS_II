@@ -46,9 +46,7 @@ def login():
         for x in users:
             if x['correo']==correo:
                 user=x
-                break
-        
-            
+                break            
 
         # curl.close()
         if not user:

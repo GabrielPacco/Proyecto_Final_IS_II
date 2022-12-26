@@ -24,8 +24,14 @@ app.register_blueprint(ponente_blueprint)
 cors = CORS(app)
 
 
-@app.route('/', methods=['GET'])
-def Index():
+@app.route('/', methods=['GET','POST'])
+def index():
+    response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
+    return render_template('index.html', eventos=response)
+
+
+@app.route('/home', methods=['GET','POST'])
+def home():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('home.html', eventos=response)
 
@@ -78,5 +84,3 @@ def Profile(id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-#branch: gabriel

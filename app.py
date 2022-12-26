@@ -66,11 +66,25 @@ def Registro():
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])
-def Evento(id):
+def evento(id):
     query = {"id" : id}
     resp = requests.post("http://127.0.0.1:5000/api/evento/get", json=query).json()
-    #evento = EventoModel(resp['id'], resp['ponente'], resp['id_lista'], resp['nombre'], resp['detalles'], resp['link'])
     return render_template('evento.html', evento=resp)
+
+@app.route('/create_evento', methods=['GET','POST'])
+def create_evento():
+    if request.method == 'POST':
+        query= {'id_ponente' : 2,
+        'nombre' : request.form['evento_nombre'],
+        'detalles' : request.form['evento_detalles'],
+        'link' : request.form['evento_link']}
+        print(query)
+        #print(nombre)
+        resp = requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
+        print(resp)
+        return  redirect('/')
+
+    return render_template('create_evento.html')
 
 @app.route('/profile/<int:id>', methods=['GET'])
 def Profile(id):

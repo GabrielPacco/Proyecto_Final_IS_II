@@ -92,7 +92,7 @@ def create_evento():
         #print(nombre)
         resp = requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
         print(resp)
-        return  redirect('/')
+        return  redirect('/home')
 
     return render_template('create_evento.html')
 

@@ -7,7 +7,7 @@ dbconfig = {
     "port":"3306",
     "user":"root",
     "password": "123456", #Aqui cada uno coloque su contraseña 
-    "database": "tif",
+    "database": "TIF",
 }
 
 class MySQLPool(object):

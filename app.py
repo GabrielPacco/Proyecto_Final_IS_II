@@ -84,7 +84,8 @@ def evento(id):
 @app.route('/create_evento', methods=['GET','POST'])
 def create_evento():
     if request.method == 'POST':
-        query= {'id_ponente' : 2,
+        query= {
+        'id_ponente' : 2,
         'nombre' : request.form['evento_nombre'],
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
@@ -101,6 +102,27 @@ def Profile(id):
     query = {"id" : id}
     resp = requests.post("http://127.0.0.1:5000/api/ponente/get", json=query).json()
     return render_template('profile.html', ponente=resp)
+
+#branch diego
+
+@app.route('/edit_evento', methods=['GET','POST'])
+def edit_evento():
+    if request.method == 'POST':
+        query= {
+        'id' : id,
+        'id_ponente' : 2,
+        'nombre' : request.form['evento_nombre'],
+        'detalles' : request.form['evento_detalles'],
+        'link' : request.form['evento_link']}
+        print(query)
+        #print(nombre)
+        resp = requests.post("http://127.0.0.1:5000/api/evento/edit",json=query)
+        print(resp)
+        return  redirect('/')
+
+    return render_template('edit_evento.html')
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

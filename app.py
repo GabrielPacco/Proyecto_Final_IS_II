@@ -66,7 +66,7 @@ def logout():
         return render_template('index.html')
 
 @app.route('/registro', methods=['GET'])
-def Registro():
+def registro():
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])

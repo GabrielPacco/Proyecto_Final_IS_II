@@ -48,10 +48,20 @@ Algunos ejemplos de test usados:
 ![alt text](Images/test/test_usuario.png "Test usuario")
 ![alt text](Images/test/test_evento.png "Test evento")
 ![alt text](Images/test/test_tema.png "Test tema")
+
+Y este este es el resultado obtenido de haber corrido todos los test unitarios. Con la libreria unittest la forma de declarar que se ha pasado un test es con un punto y que ha fallado con la letra F.  
+
+![alt text](Images/test/test_model_rpta.png "Test tema")
+
 ## Pruebas funcionales
 Para las pruebas funcionales se ha hecho uso de selenium  
 
 ![alt text](Images/test/test_create_evento_codigo.png "Test funcional create evento")
+
+Y el resultado seria  
+
+![alt text](Images/test/test_create_evento.png "Test funcional create evento")
+
 ## Pruebas de seguridad
 Para la pruebas de seguridad se ha hecho uso de Owasp zap
 # Contenidos

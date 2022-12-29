@@ -96,7 +96,25 @@ Para la pruebas de seguridad se ha hecho uso de Owasp zap
 ![image](Images/owasp11.png) 
 
 ## Pruebas de rendimiento
-Para las pruebas de rendimiento se ha hecho uso de JMeter
+## Requisitos
+
+- Jmeter
+- Paths (JMeter, Proyecto, Output y URL)
+
+Para esta sección usaremos la herramienta JMeter para hacer las pruebas de rendimiento en el proyecto. 
+
+Iniciamos un plan de pruebas, con grupos de hilos y su respectivo HTTP.
+![Config](img/jmeterlogin_peti.jpg)
+
+![Config](img/jmeter_AR.jpg)
+
+![Config](img/jmeter_RA.jpg)
+
+Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un informe completo de este. 
+
+![Config](img/report.png)
+![Config](img/report2.png)
+
 
 ## Gestion de issues
 La gestion de Issues se ha realizado directamente en Github. 

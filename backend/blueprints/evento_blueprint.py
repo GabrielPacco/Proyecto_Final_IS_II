@@ -47,3 +47,14 @@ def delete_evento():
         int(request.json['id'])
     )    
     return jsonify(content)
+
+
+#branch diego
+
+@evento_blueprint.route('/api/evento/delete', methods=['POST']) # Ruta accesible por POST
+@cross_origin()
+def delete_evento():
+    content = repo.delete(
+        int(request.json['id'])
+    )    
+    return jsonify(content)

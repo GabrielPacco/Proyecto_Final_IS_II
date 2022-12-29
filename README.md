@@ -45,8 +45,7 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ## Previsualización del análisis de Sonar Scanner
 
-![image]([https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Security_Vulnerabilities.png](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/localhost_9000_dashboard_id%3DProyecto_Final_IS_II_1.0(iPad%20Air).png)) <br>
-
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/localhost_9000_dashboard_id%3DProyecto_Final_IS_II_1.0(iPad%20Air).png) <br>
 ## Bugs
 ![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Bugs.png) <br>
 

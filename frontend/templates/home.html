@@ -51,12 +51,13 @@
             </div>
         </header>
         <!-- Main Content-->
-        <div class="container d-flex">
-            <a href="{{ url_for('create_evento') }}" class="button px-2 bg-primary">Crear evento</a>
-        </div>
         <div class="container px-4 px-lg-5">
+
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
+
+                    <a id="btnevento" name="btnevento" type="button" class="btn px-2 btn-primary" href="/create_evento">Crear Evento</a>
+                    
                     <!-- Post preview-->
                     {% for evento in eventos %}
                     <div class="post-preview">
@@ -64,8 +65,7 @@
                             <h2 class="post-title">{{ evento.nombre }}</h2>
                             <h3 class="post-subtitle">{{ evento.detalles }}</h3>
                         </a>
-                        <a href="{{ url_for('delete_evento', id=evento.id) }}" class="button px-2 bg-primary">eliminar</a>
-                        
+                        <a id="btnevento" name="btnevento" type="button" class="btn px-2 btn-primary" href="/delete_evento">eliminar</a>
                         <p class="post-meta">
                             Publicado por 
                             <a href="#!">{{ evento.ponente.nombre }} {{ evento.ponente.apellido }}</a>

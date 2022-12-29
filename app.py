@@ -10,32 +10,23 @@ from flask_cors import CORS, cross_origin # para que no genere errores de CORS a
 
 from backend.blueprints.evento_blueprint import evento_blueprint
 from backend.blueprints.ponente_blueprint import ponente_blueprint
-
-from backend.models.evento import EventoModel
-from backend.models.ponente import PonenteModel
-
 app = Flask(__name__,template_folder='frontend/templates',static_folder='frontend/static')
 
 app.secret_key= "averysecretkey"
 
-#mysql = MySQL()
 app.register_blueprint(evento_blueprint)
-app.register_blueprint(ponente_blueprint)
+#app.register_blueprint(ponente_blueprint)
 
 cors = CORS(app)
-#mysql = MySQL(app)
-#mysql.init_app(app)
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('index.html', eventos=response)
 
 
 @app.route('/home', methods=['GET','POST'])
 def home():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
-    print("respnjse",response)
     return render_template('home.html', eventos=response)
     
 @app.route('/login')
@@ -47,6 +38,7 @@ def validate_login():
     if request.method == 'POST':
         correo = request.form['typeEmailX']
         password = request.form['typePasswordX']
+        
         users=requests.post("http://127.0.0.1:5000/api/ponente/get_all").json()
         user={}
         for x in users:
@@ -72,7 +64,7 @@ def logout():
         return render_template('index.html')
 
 @app.route('/registro', methods=['GET'])
-def Registro():
+def registro():
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])
@@ -81,6 +73,7 @@ def evento(id):
     resp = requests.post("http://127.0.0.1:5000/api/evento/get", json=query).json()
     return render_template('evento.html', evento=resp)
 
+
 @app.route('/create_evento', methods=['GET','POST'])
 def create_evento():
     if request.method == 'POST':
@@ -88,13 +81,10 @@ def create_evento():
         'nombre' : request.form['evento_nombre'],
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
-        print(query)
-        #print(nombre)
-        resp = requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
-        print(resp)
-        return  redirect('/')
-
+        requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
+        return  redirect('/home')
     return render_template('create_evento.html')
+
 
 @app.route('/profile/<int:id>', methods=['GET'])
 def profile(id):

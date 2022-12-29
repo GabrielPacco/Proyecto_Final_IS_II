@@ -22,11 +22,23 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 
 ![alt text](Images/perfil.PNG "Title")
 
-### - Interaccion a traves de sesiones
+### - Login
 
 ![alt text](Images/login.PNG "Title")
 
+### - Register
 
+![alt text](Images/sing_up.png "Registrar")
+
+### - Crear eventos
+
+![alt text](Images/crear_evento_template.png "Crear evento")
+
+### - Ver nuevos eventos
+
+![alt text](Images/nuevos_eventos.png "Ver nuevos eventos")
+
+  
 ## Github
 Se ha utilizado como repositorio fuente ... sobre el cual se ha trabajo.  
 Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajado y se ha realizado integracion continua sobre la rama de **desarrollo** en la cual se realizan las diferentes pruebas tanto unitarias, funcionales, de rendimiento, de seguridad y el analisis estatico.
@@ -35,7 +47,7 @@ Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajad
 
 ## Pipeline en Jenkins
 Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
-![alt text](Images/github_branches.png "Pipeline jenkins")
+![alt text](Images/pipeline_jenkins.png "Pipeline jenkins")
 
 ## Construcción automática
 En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.

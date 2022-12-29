@@ -110,7 +110,7 @@ Iniciamos un plan de pruebas, con grupos de hilos y su respectivo HTTP.
 
 ![Config](Images/jmeter_RA.png)
 
-![Config](Images/jmeter_AR.jpg)
+![Config](Images/jmeter_AR.png)
 
 Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un informe completo de este. 
 

@@ -42,12 +42,12 @@ La estructura y la denominación de los agregados, las clases y los métodos de 
 
 ## Integrante (en orden alfabetico):
 
--Diego Josue Aquino Quispe
--Erick Jesus Perez Chipa
--Gabriel Pacco Huaraca
--John Edson Sanchez Chilo
--Levi Joel Castillon Urquiza
--Ronald Romario Gutierrez Arratia 
+-Diego Josue Aquino Quispe <br>
+-Erick Jesus Perez Chipa <br>
+-Gabriel Pacco Huaraca <br>
+-John Edson Sanchez Chilo <br>
+-Levi Joel Castillon Urquiza <br>
+-Ronald Romario Gutierrez Arratia  <br>
 
 
 

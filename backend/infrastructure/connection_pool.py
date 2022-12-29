@@ -1,16 +1,7 @@
 # pip install mysql-connector-python
 import time
 import mysql.connector.pooling
-
-
-dbconfig = {
-    "host":"127.0.0.1",
-    "port":"3306",
-    "user":"ba4af9cb7efdee",
-    "password":"010d7bb1",
-    "database":"heroku_7ee060115e9b2a7"
-}
-
+from backend.infrastructure.config import dbconfig
 class MySQLPool(object):
     """
     create a pool when connect mysql, which will decrease the time spent in 

@@ -67,7 +67,7 @@ class EventoRepository:
     # Borrar un evento por id
     def delete(self, id):
         params = {'id' : id}      
-        query = "DELETE FROM evento WHERE id = %(id)s"    
+        query = "DELETE FROM evento WHERE idEvento = %(id)s"    
         self.mysql_pool.execute(query, params, commit=True)   
         data = {'result': 1}
         return data

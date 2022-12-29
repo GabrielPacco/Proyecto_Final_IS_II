@@ -45,5 +45,5 @@ def get_all_evento():
 def delete_evento():
     content = repo.delete(
         int(request.json['id'])
-    )    
+    )
     return jsonify(content)

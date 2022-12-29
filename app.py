@@ -104,9 +104,10 @@ def profile(id):
 
 @app.route('/delete_evento/<int:id>', methods=['GET','POST'])
 def delete_evento(id):
+    print(id)
     query = {"id" : id}
-    resp = requests.post("http://127.0.0.1:5000/api/evento/delete", json=query)
-    return render_template('home.html', evento=resp)
+    requests.post("http://127.0.0.1:5000/api/evento/delete", json=query)
+    return redirect('/home')
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -6,3 +6,4 @@ backend/infrastructure/__pycache__/evento_repository.cpython-310.pyc
 backend/models/__pycache__/evento.cpython-310.pyc
 backend/models/__pycache__/ponente.cpython-310.pyc
 backend/models/__pycache__/usuario.cpython-310.pyc
+.scannerwork

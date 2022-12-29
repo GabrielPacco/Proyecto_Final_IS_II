@@ -22,7 +22,7 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ![alt text](Images/login.PNG "Title")
 
-##Herramientas
+## Herramientas
 
 -GitHub: Usamos este tipo de herramienta para crear un repositorio donde alojar nuestro proyecto.
 -JMeter
@@ -32,7 +32,7 @@ La pagina web presenta entre sus principales funcionalidades:
 -OWASP ZAP
 -Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas.
 
-##Arquitectura del proyecto: 
+## Arquitectura del proyecto: 
 
 ### Interface
 Esta capa contiene todo lo que interactúa con otros sistemas, como los servicios web, las interfaces RMI o las aplicaciones web, y los frontales de procesamiento por lotes. Se encarga de la interpretación, validación y traducción de los datos entrantes. También se encarga de la serialización de los datos salientes, como HTML o XML a través de HTTP para los navegadores web o los clientes de servicios web.

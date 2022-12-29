@@ -8,7 +8,7 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ### - Visualizar a traves de una interfaz grafica eventos relacionados a la computacion
 
-![alt text](Images/interfaz.PNG "Title")
+![alt text](Images/interfaz.PNG "Title"){width='50px' height='50px'}
 
 ### - Obtener mas informacion de los eventos
 

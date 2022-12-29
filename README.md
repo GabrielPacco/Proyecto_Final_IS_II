@@ -68,6 +68,11 @@ Dentro de los cuales hemos usado los métodos de refactorización <br>
 -Substitute Algorithm   <br>
 -SonarLint : cumplir con una convención de nomenclatura.<br>
 ![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/funcion_login_con.png) <br>
+# Pruebas Funcionales+
+### Funcion LOGIN
+
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/pruebafuncional.png) <br>
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/pruebafuncional2.png) <br>
 
 ## Arquitectura del proyecto: 
 

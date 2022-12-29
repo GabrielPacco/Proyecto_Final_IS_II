@@ -27,9 +27,9 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ![alt text](Images/event.png "Evento")
 
-![alt text](Images/event_bug.png "Evento Bug")
+![alt text](Images/evento_bug.png "Evento Bug")
 
-![alt text](Images/event_refact.png "Evento")
+![alt text](Images/evento_refact.png "Evento")
 
 
 

@@ -1,8 +1,7 @@
 # pip install mysql-connector-python
 import time
 import mysql.connector.pooling
-from config import dbconfig
-
+from backend.infrastructure.config import dbconfig
 class MySQLPool(object):
     """
     create a pool when connect mysql, which will decrease the time spent in 

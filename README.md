@@ -82,8 +82,8 @@ Iniciamos un plan de pruebas, con grupos de hilos y su respectivo HTTP.
 
 Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un informe completo de este. 
 
-![Config](img/report.jpg)
-![Config](img/report2.jpg)
+![Config](img/report.png)
+![Config](img/report2.png)
 
 
 ## Gestion de issues

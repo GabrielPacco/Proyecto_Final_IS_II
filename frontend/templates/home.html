@@ -65,19 +65,22 @@
                             <h2 class="post-title">{{ evento.nombre }}</h2>
                             <h3 class="post-subtitle">{{ evento.detalles }}</h3>
                         </a>
-                        <a id="btnevento" name="btnevento" type="button" class="btn px-2 btn-primary" href="/delete_evento">eliminar</a>
+                        
                         <p class="post-meta">
                             Publicado por 
                             <a href="#!">{{ evento.ponente.nombre }} {{ evento.ponente.apellido }}</a>
                             el 7 de Septiembre, 2022
                         </p>
-                        <a href="{{ url_for('edit_evento', id=evento.id) }}" class="button">Editar evento</a>
+                        <a class="btn px-2 btn-info rounded" href="{{ url_for('edit_evento', id=evento.id) }}" class="button">Editar evento</a>
+                        <br>
+                        <br>
+                        <a type="button" class="btn px-2 btn-info rounded " href="{{ url_for('delete_evento', id=evento.id) }}">Eliminar</a>
                     </div>
                     <!-- Divider-->
                     <hr class="my-4" />
                     {% endfor %}
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Eventos anteriores →</a></div>
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Eventos siguientes →</a></div>
                 </div>
             </div>
         </div>

@@ -6,10 +6,10 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 ## Herramientas
 
 -GitHub: Usamos este tipo de herramienta para crear un repositorio donde alojar nuestro proyecto.<br>
--JMeter<br>
+-JMeter: Es ua herramienta medir el rendimiento de una aplicación<br>
 -SonarQube: Es una plataforma para evaluar código fuente. Es software libre y usa diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs para obtener métricas que pueden ayudar a mejorar la calidad del código de un programa.<br>
 -Sonar-scanner <br>
--JUnit: Es un conjunto de bibliotecas son utilizadas en programación para hacer pruebas unitarias de aplicaciones Java.JUnit es el estándar de facto para las pruebas unitarias de una aplicación Java. Aunque, es popular para las pruebas unitarias, tiene soporte completo y provisión para pruebas de instrumentación también. <br>
+-Unittest: Es un una libreria de programación para hacer pruebas unitarias, es el estándar de facto para las pruebas unitarias de una aplicación Python. Aunque, es popular para las pruebas unitarias, tiene soporte completo y provisión para pruebas de instrumentación también. <br>
 -OWASP ZAP <br>
 -Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas. <br>
 
@@ -22,11 +22,23 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 
 ![alt text](Images/perfil.PNG "Title")
 
-### - Interaccion a traves de sesiones
+### - Login
 
 ![alt text](Images/login.PNG "Title")
 
+### - Register
 
+![alt text](Images/sign_up.png "Registrar")
+
+### - Crear eventos
+
+![alt text](Images/crear_evento_template.png "Crear evento")
+
+### - Ver nuevos eventos
+
+![alt text](Images/nuevos_eventos.png "Ver nuevos eventos")
+
+  
 ## Github
 Se ha utilizado como repositorio fuente ... sobre el cual se ha trabajo.  
 Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajado y se ha realizado integracion continua sobre la rama de **desarrollo** en la cual se realizan las diferentes pruebas tanto unitarias, funcionales, de rendimiento, de seguridad y el analisis estatico.
@@ -35,10 +47,12 @@ Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajad
 
 ## Pipeline en Jenkins
 Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
-![alt text](Images/github_branches.png "Pipeline jenkins")
+![alt text](Images/pipeline_jenkins.png "Pipeline jenkins")
 
 ## Construcción automática
 En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.
+
+![alt text](Images/requirements.png "Requirements")
 
 ## Analisis Estático
 ## Pruebas unitarias
@@ -84,7 +98,27 @@ Para la pruebas de seguridad se ha hecho uso de Owasp zap
 ![image](Images/owasp11.png) 
 
 ## Pruebas de rendimiento
-Para las pruebas de rendimiento se ha hecho uso de JMeter
+## Requisitos
 
-## Gestion de issues
+- Jmeter
+- Paths (JMeter, Proyecto, Output y URL)
+
+Para esta sección usaremos la herramienta JMeter para hacer las pruebas de rendimiento en el proyecto. 
+
+Iniciamos un plan de pruebas, con grupos de hilos y su respectivo HTTP.
+![Config](Images/jmeterlogin_peti.jpg)
+
+![Config](Images/jmeter_AR.jpg)
+
+![Config](Images/jmeter_RA.jpg)
+
+Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un informe completo de este. 
+
+![Config](Images/report.png)
+![Config](Images/report2.png)
+
+
+## Gestion de issues  
 La gestion de Issues se ha realizado directamente en Github. 
+
+![alt text](Images/issues.png "Issues")

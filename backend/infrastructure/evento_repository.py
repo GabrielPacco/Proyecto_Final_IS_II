@@ -33,7 +33,7 @@ class EventoRepository:
 
     # Obtener todos los eventos
     def get_all(self):
-        rv = self.mysql_pool.execute("SELECT * FROM Evento ORDER BY idEvento")
+        rv = self.mysql_pool.execute("SELECT * FROM evento ORDER BY idEvento")
         data = []
         content = {}
         for result in rv:

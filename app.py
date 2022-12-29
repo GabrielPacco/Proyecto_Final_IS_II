@@ -8,28 +8,29 @@ from flask import render_template,url_for
 from flask_cors import CORS, cross_origin # para que no genere errores de CORS al hacer peticiones
 
 from backend.blueprints.evento_blueprint import evento_blueprint
-from backend.blueprints.ponente_blueprint import ponente_blueprint
-
-from backend.models.evento import EventoModel
-from backend.models.ponente import PonenteModel
+#from backend.blueprints.ponente_blueprint import ponente_blueprint
+#from backend.blueprints.asistente_blueprint import asistente_blueprint
+from backend.infrastructure.asistente_repository import AsistenteRepository
 
 app = Flask(__name__,template_folder='frontend/templates',static_folder='frontend/static')
 
 app.secret_key= "averysecretkey"
 
 
+
 app.register_blueprint(evento_blueprint)
-app.register_blueprint(ponente_blueprint)
+#app.register_blueprint(ponente_blueprint)
+#app.register_blueprint(asistente_blueprint)
 
 cors = CORS(app)
 
-
+#comments
 @app.route('/', methods=['GET'])
-def Index():
+def index():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('home.html', eventos=response)
 
-
+ 
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
@@ -39,7 +40,7 @@ def login():
         # curl = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         # curl.execute("SELECT * FROM usuario WHERE =%s",[correo])
         # user = curl.fetchone()
-        users=requests.post("http://127.0.0.1:5000/api/ponente/get_all").json()
+        users=requests.post("http://127.0.0.1:5000/api/ponente/get_all")
         print(users)
         user={}
 
@@ -55,14 +56,22 @@ def login():
             return "Not found"
         elif password == user['nombre']:
             session['correo'] = user['correo']
-            return  redirect(url_for('Index'))
+            return  redirect(url_for('index'))
         else:
             return redirect(url_for('Registro'))
 
     return render_template('login.html')
 
-@app.route('/registro', methods=['GET'])
-def Registro():
+@app.route('/registro', methods=['GET','POST'])
+def registro():
+    if request.method == 'POST':
+        nombres = request.form['nombre']
+        apellidos = request.form['apellidos']
+        email = request.form['email']
+        #print(response)
+        asistente = AsistenteRepository()
+        asistente.create(nombres,apellidos,email)
+        return render_template('home.html')
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])

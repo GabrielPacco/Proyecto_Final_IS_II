@@ -32,6 +32,17 @@ La pagina web presenta entre sus principales funcionalidades:
 -OWASP ZAP
 -Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas.
 
+# Análisis Estático
+
+## Requisitos
+
+-SonarQube official Plugin
+-SonarScanner Plugin
+-Sonar Qube Server
+-sonar-project.properties
+
+# Refacotoring Code
+
 ## Arquitectura del proyecto: 
 
 ### Interface

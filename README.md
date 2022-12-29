@@ -52,7 +52,7 @@ Para realizar el procedimiento completo de integración continua es necesario tr
 ## Construcción automática
 En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.
 
-![alt text](Images/test/requirements.png "Requirements")
+![alt text](Images/requirements.png "Requirements")
 
 ## Analisis Estático
 ## Pruebas unitarias
@@ -121,4 +121,4 @@ Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un 
 ## Gestion de issues  
 La gestion de Issues se ha realizado directamente en Github. 
 
-![alt text](Images/test/issues.png "Issues")
+![alt text](Images/issues.png "Issues")

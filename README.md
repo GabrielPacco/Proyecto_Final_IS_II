@@ -34,6 +34,10 @@ La pagina web presenta entre sus principales funcionalidades:
 
 # Análisis Estático
 
+
+
+# Análisis Estático
+
 ## Requisitos
 
 -SonarQube official Plugin <br>
@@ -41,7 +45,23 @@ La pagina web presenta entre sus principales funcionalidades:
 -Sonar Qube Server <br>
 -sonar-project.properties <br>
 
-# Refacotoring Code
+## Previsualización del análisis de Sonar Scanner
+
+## Vulnerabilidades
+
+## Refacotoring Code
+
+# FUNCIÓN LOGIN
+
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/funcion_login_sin.png) <br>
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/funcion_login_sin2.png) <br>
+Teniendo en cuenta los  warning que nos salen, haremos refactoring a estos, así como reestructurar la función login, para que sea más entendible y eficiente.<br>
+Dentro de los cuales hemos usado los métodos de refactorización <br>
+
+-Inline Method <br>
+-Substitute Algorithm   <br>
+-SonarLint : cumplir con una convención de nomenclatura.<br>
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/funcion_login_con.png) <br>
 
 ## Arquitectura del proyecto: 
 

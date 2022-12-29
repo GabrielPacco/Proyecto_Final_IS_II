@@ -18,13 +18,10 @@ app = Flask(__name__,template_folder='frontend/templates',static_folder='fronten
 
 app.secret_key= "averysecretkey"
 
-#mysql = MySQL()
 app.register_blueprint(evento_blueprint)
 app.register_blueprint(ponente_blueprint)
 
 cors = CORS(app)
-#mysql = MySQL(app)
-#mysql.init_app(app)
 
 @app.route('/', methods=['GET','POST'])
 def index():

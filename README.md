@@ -22,10 +22,26 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ![alt text](Images/login.PNG "Title")
 
+## Github
+Se ha utilizado como repositorio fuente ... sobre el cual se ha trabajo.  
+Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajado y se ha realizado integracion continua sobre la rama de **desarrollo** en la cual se realizan las diferentes pruebas tanto unitarias, funcionales, de rendimiento, de seguridad y el analisis estatico.
 
+![alt text](Images/github_branches.png "Github branches")
 
-# OWASP ZAP
-##Contenidos
+## Pipeline en Jenkins
+Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
+![alt text](Images/github_branches.png "Pipeline jenkins")
+
+## Construcción automática
+En Python el tema de construcción automática no necesita de comandos específicos, 
+## Analisis Estático
+## Pruebas unitarias
+Para las pruebas unitarias se ha utilizado la librería de unittest
+## Pruebas funcionales
+Para las pruebas funcionales se ha hecho uso de selenium
+## Pruebas de seguridad
+Para la pruebas de seguridad se ha hecho uso de Owasp zap
+# Contenidos
 ![image](Images/owasp1.png) 
 
 ##Sobre el reporte
@@ -44,4 +60,7 @@ La pagina web presenta entre sus principales funcionalidades:
 ![image](Images/owasp10.png)
 ![image](Images/owasp11.png) 
 
-
+## Pruebas de rendimiento
+Para las pruebas de rendimiento se ha hecho uso de JMeter
+## Gestion de issues
+La gestion de Issues se ha realizado directamente en Github. 

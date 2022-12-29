@@ -24,22 +24,22 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ## Herramientas
 
--GitHub: Usamos este tipo de herramienta para crear un repositorio donde alojar nuestro proyecto.
--JMeter
--SonarQube: Es una plataforma para evaluar código fuente. Es software libre y usa diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs para obtener métricas que pueden ayudar a mejorar la calidad del código de un programa.​
--Sonar-scanner
--JUnit: Es un conjunto de bibliotecas son utilizadas en programación para hacer pruebas unitarias de aplicaciones Java.JUnit es el estándar de facto para las pruebas unitarias de una aplicación Java. Aunque, es popular para las pruebas unitarias, tiene soporte completo y provisión para pruebas de instrumentación también.
--OWASP ZAP
--Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas.
+-GitHub: Usamos este tipo de herramienta para crear un repositorio donde alojar nuestro proyecto.<br>
+-JMeter<br>
+-SonarQube: Es una plataforma para evaluar código fuente. Es software libre y usa diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs para obtener métricas que pueden ayudar a mejorar la calidad del código de un programa.<br>
+-Sonar-scanner <br>
+-JUnit: Es un conjunto de bibliotecas son utilizadas en programación para hacer pruebas unitarias de aplicaciones Java.JUnit es el estándar de facto para las pruebas unitarias de una aplicación Java. Aunque, es popular para las pruebas unitarias, tiene soporte completo y provisión para pruebas de instrumentación también. <br>
+-OWASP ZAP <br>
+-Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas. <br>
 
 # Análisis Estático
 
 ## Requisitos
 
--SonarQube official Plugin
--SonarScanner Plugin
--Sonar Qube Server
--sonar-project.properties
+-SonarQube official Plugin <br>
+-SonarScanner Plugin <br>
+-Sonar Qube Server <br>
+-sonar-project.properties <br>
 
 # Refacotoring Code
 

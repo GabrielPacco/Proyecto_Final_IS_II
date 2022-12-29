@@ -97,10 +97,16 @@ def create_evento():
     return render_template('create_evento.html')
 
 @app.route('/profile/<int:id>', methods=['GET'])
-def Profile(id):
+def profile(id):
     query = {"id" : id}
     resp = requests.post("http://127.0.0.1:5000/api/ponente/get", json=query).json()
     return render_template('profile.html', ponente=resp)
+
+@app.route('/delete_evento/<int:id>', methods=['GET','POST'])
+def delete_evento(id):
+    query = {"id" : id}
+    resp = requests.post("http://127.0.0.1:5000/api/evento/delete", json=query)
+    return render_template('home.html', evento=resp)
 
 if __name__ == "__main__":
     app.run(debug=True)

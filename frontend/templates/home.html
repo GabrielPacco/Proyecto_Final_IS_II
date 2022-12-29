@@ -53,7 +53,6 @@
         <!-- Main Content-->
         <div class="container d-flex">
             <a href="{{ url_for('create_evento') }}" class="button px-2 bg-primary">Crear evento</a>
-            
         </div>
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -65,6 +64,8 @@
                             <h2 class="post-title">{{ evento.nombre }}</h2>
                             <h3 class="post-subtitle">{{ evento.detalles }}</h3>
                         </a>
+                        <a href="{{ url_for('delete_evento', id=evento.id) }}" class="button px-2 bg-primary">eliminar</a>
+                        
                         <p class="post-meta">
                             Publicado por 
                             <a href="#!">{{ evento.ponente.nombre }} {{ evento.ponente.apellido }}</a>

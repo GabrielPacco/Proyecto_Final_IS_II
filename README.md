@@ -32,11 +32,9 @@ La pagina web presenta entre sus principales funcionalidades:
 -OWASP ZAP <br>
 -Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas. <br>
 
-# Análisis Estático
-
-
 
 # Análisis Estático
+
 
 ## Requisitos
 
@@ -47,11 +45,20 @@ La pagina web presenta entre sus principales funcionalidades:
 
 ## Previsualización del análisis de Sonar Scanner
 
+![image]([https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Security_Vulnerabilities.png](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/localhost_9000_dashboard_id%3DProyecto_Final_IS_II_1.0(iPad%20Air).png)) <br>
+
+## Bugs
+
+![image]([https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Security_Vulnerabilities.png](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Bugs.png)) <br>
 ## Vulnerabilidades
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Security_Vulnerabilities.png) <br>
 
-## Refacotoring Code
+## Code Smells
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/Capturas_Sonar_Qube/Code_Smells.png) <br>
 
-# FUNCIÓN LOGIN
+## Refactoring Code
+
+### FUNCIÓN LOGIN
 
 ![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/funcion_login_sin.png) <br>
 ![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/funcion_login_sin2.png) <br>

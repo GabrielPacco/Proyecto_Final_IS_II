@@ -41,8 +41,6 @@ def delete_evento():
     )    
     return jsonify(content)
 
-#branch diego
-
 @evento_blueprint.route('/api/evento/edit', methods=['POST']) # Ruta accesible por POST
 @cross_origin()
 def edit_evento():

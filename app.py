@@ -103,8 +103,6 @@ def profile(id):
     resp = requests.post("http://127.0.0.1:5000/api/ponente/get", json=query).json()
     return render_template('profile.html', ponente=resp)
 
-#branch diego
-
 @app.route('/edit_evento/<int:id>', methods=['GET','POST'])
 def edit_evento(id):
     if request.method == 'POST':
@@ -120,6 +118,12 @@ def edit_evento(id):
     return render_template('edit_evento.html')
 
 
+@app.route('/delete_evento/<int:id>', methods=['GET','POST'])
+def delete_evento(id):
+    print(id)
+    query = {"id" : id}
+    requests.post("http://127.0.0.1:5000/api/evento/delete", json=query)
+    return redirect('/home')
 
 if __name__ == "__main__":
     app.run(debug=True)

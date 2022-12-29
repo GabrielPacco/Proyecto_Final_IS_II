@@ -10,6 +10,14 @@ dbconfig = {
     "database":"heroku_1be4b5c4919707d"
 }
 
+dbconfig = {
+    "host":"127.0.0.1",
+    "port":"3306",
+    "user":"root",
+    "password":"admin_1572003_jesc",
+    "database":"tif"
+}
+
 class MySQLPool(object):
     """
     create a pool when connect mysql, which will decrease the time spent in 

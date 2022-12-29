@@ -3,11 +3,17 @@ import time
 import mysql.connector.pooling
 
 dbconfig = {
-    "host":"127.0.0.1",
+    "host":"us-cdbr-east-06.cleardb.net",
     "port":"3306",
+<<<<<<< HEAD
     "user":"root",
     "password": "kerito17",
     "database": "tif",
+=======
+    "user":"ba4af9cb7efdee",
+    "password":"010d7bb1",
+    "database":"heroku_7ee060115e9b2a7"
+>>>>>>> d1f85e51a57404d8773d324f5c42c4376c807aa3
 }
 
 class MySQLPool(object):
@@ -16,7 +22,7 @@ class MySQLPool(object):
     request connection, create connection and close connection.
     """
     def __init__(self):             
-        self.pool = self.create_pool(pool_name='task_pool', pool_size=3)
+        self.pool = self.create_pool(pool_name='task_pool', pool_size=30)
 
     def create_pool(self, pool_name, pool_size):
         """
@@ -90,7 +96,6 @@ class MySQLPool(object):
             res = cursor.fetchall()
             self.close(conn, cursor)
             return res
-
 
 if __name__ == "__main__":
     mysql_pool = MySQLPool()

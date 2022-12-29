@@ -63,8 +63,18 @@ def logout():
         session.pop('correo', None)
         return render_template('index.html')
 
-@app.route('/registro', methods=['GET'])
+@app.route('/registro', methods=['GET','POST'])
 def registro():
+    if request.method == 'POST':
+        nombres = request.form['nombre']
+        apellidos = request.form['apellidos']
+        email = request.form['email']
+        query= {'id_ponente' : 2,
+        'nombres' : nombres,
+        'apellidos' : apellidos,
+        'email' : email}
+        requests.post("http://127.0.0.1:5000/api/asistente/create",json=query)
+        return render_template('home.html')
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])

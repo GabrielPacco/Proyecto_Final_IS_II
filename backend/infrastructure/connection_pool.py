@@ -3,9 +3,9 @@ import time
 import mysql.connector.pooling
 
 dbconfig = {
-    "host":"172.17.0.2",
+    "host":"127.0.0.1",
     "port":"3306",
-    "user":"mysql-is",
+    "user":"root",
     "password":"1234",
     "database":"tif"
 }

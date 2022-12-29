@@ -9,10 +9,7 @@ from flask import render_template,url_for
 from flask_cors import CORS, cross_origin # para que no genere errores de CORS al hacer peticiones
 
 from backend.blueprints.evento_blueprint import evento_blueprint
-from backend.blueprints.ponente_blueprint import ponente_blueprint
-
-from backend.models.evento import EventoModel
-from backend.models.ponente import PonenteModel
+#from backend.blueprints.ponente_blueprint import ponente_blueprint
 
 app = Flask(__name__,template_folder='frontend/templates',static_folder='frontend/static')
 
@@ -20,7 +17,7 @@ app.secret_key= "averysecretkey"
 
 #mysql = MySQL()
 app.register_blueprint(evento_blueprint)
-app.register_blueprint(ponente_blueprint)
+#app.register_blueprint(ponente_blueprint)
 
 cors = CORS(app)
 #mysql = MySQL(app)

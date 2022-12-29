@@ -38,12 +38,20 @@ Para realizar el procedimiento completo de integración continua es necesario tr
 ![alt text](Images/github_branches.png "Pipeline jenkins")
 
 ## Construcción automática
-En Python el tema de construcción automática no necesita de comandos específicos, 
+En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.
+
 ## Analisis Estático
 ## Pruebas unitarias
 Para las pruebas unitarias se ha utilizado la librería de unittest
+Algunos ejemplos de test usados: 
+
+![alt text](Images/test/test_usuario.png "Test usuario")
+![alt text](Images/test/test_evento.png "Test evento")
+![alt text](Images/test/test_tema.png "Test tema")
 ## Pruebas funcionales
-Para las pruebas funcionales se ha hecho uso de selenium
+Para las pruebas funcionales se ha hecho uso de selenium  
+
+![alt text](Images/test/test_create_evento_codigo.png "Test funcional create evento")
 ## Pruebas de seguridad
 Para la pruebas de seguridad se ha hecho uso de Owasp zap
 # Contenidos

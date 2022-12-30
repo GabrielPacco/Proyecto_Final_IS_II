@@ -69,6 +69,13 @@ En Python el tema de construcción automática no necesita de comandos específi
 -Sonar Qube Server <br>
 -sonar-project.properties <br>
 
+## Antes del Refactoring
+
+![](https://live.staticflickr.com/65535/52594267137_3f144b21a3_c.jpg)
+![](https://live.staticflickr.com/65535/52595272258_6e81ae3c25_c.jpg)
+![](https://live.staticflickr.com/65535/52594267137_3f144b21a3_c.jpg)
+![](https://live.staticflickr.com/65535/52595175745_415ef6cc31_c.jpg)
+
 ## Pruebas unitarias
 Para las pruebas unitarias se ha utilizado la librería de unittest
 Algunos ejemplos de test usados: 

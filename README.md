@@ -31,11 +31,8 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 Se ha utilizado como repositorio fuente ... sobre el cual se ha trabajo.  
 Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajado y se ha realizado integracion continua sobre la rama de **desarrollo** en la cual se realizan las diferentes pruebas tanto unitarias, funcionales, de rendimiento, de seguridad y el analisis estatico.
 
-![alt text](Images/github_branches.png "Github branches")
-
 ## Pipeline en Jenkins
 Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
-![alt text](Images/github_branches.png "Pipeline jenkins")
 
 ## Construcción automática
 En Python el tema de construcción automática no necesita de comandos específicos, 
@@ -49,8 +46,10 @@ Para la pruebas de seguridad se ha hecho uso de Owasp zap
 # Contenidos
 ## Función Profile
 ![Config](Images/Pro.png)
+
 Vemos algunos warning, que nos aparecen en nuestra función profile, las cuales analizaremos con SonarLint: 
 ![Config](Images/smells.png)
+
 En estas dos imágenes se nos indica un Code Smell, el cual debemos de corregir el cual se logra realizar y se obtiene el siguiente resultado:
 ![Config](Images/pro_re.png)
 ## Pruebas de rendimiento

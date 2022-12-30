@@ -68,21 +68,19 @@ def registro():
         nombres = request.form['nombre']
         apellidos = request.form['apellidos']
         email = request.form['email']
-        #print(response)
         asistente = AsistenteRepository()
         asistente.create(nombres,apellidos,email)
         return render_template('home.html')
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])
-def Evento(id):
+def evento(id):
     query = {"id" : id}
     resp = requests.post("http://127.0.0.1:5000/api/evento/get", json=query).json()
-    #evento = EventoModel(resp['id'], resp['ponente'], resp['id_lista'], resp['nombre'], resp['detalles'], resp['link'])
     return render_template('evento.html', evento=resp)
 
 @app.route('/profile/<int:id>', methods=['GET'])
-def Profile(id):
+def profile(id):
     query = {"id" : id}
     resp = requests.post("http://127.0.0.1:5000/api/ponente/get", json=query).json()
     return render_template('profile.html', ponente=resp)

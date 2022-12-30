@@ -16,15 +16,27 @@ Se hizo refactoring
 
 ![alt text](Images/refact_john/evento_refact.png "Evento code refact")
 
+## Nueva funcionalidad
+
+Se creo la funcionalidad para crear eventos
+
+![alt text](Images/refact_john/create_evento.png "Crear evento code")
+
+
+![alt text](Images/refact_john/crear_evento_template.png "Template")
+
 ## Pruebas unitarias
 Para las pruebas unitarias se ha utilizado la librería de unittest
 
+![alt text](Images/refact_john/test_evento.png "Test evento")
+
+![alt text](Images/refact_john/test_evento_rpta.png "Test evento")
 
 ## Pruebas funcionales
 Para las pruebas funcionales se ha hecho uso de selenium
 
-![alt text](Images/test/test_create_evento_codigo.png "Test funcional create evento")
+![alt text](Images/refact_john/test_create_evento_codigo.png "Test funcional create evento")
 
 Y el resultado seria  
 
-![alt text](Images/test/test_create_evento.png "Test funcional create evento")
+![alt text](Images/refact_john/test_create_evento.png "Test funcional create evento")

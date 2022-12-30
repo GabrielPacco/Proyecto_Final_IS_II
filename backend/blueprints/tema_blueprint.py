@@ -29,8 +29,3 @@ def get_all_tema():
     content = repo.get_all() 
     return jsonify(content)
 
-@tema_blueprint.route('/api/tema/delete', methods=['POST']) # Verificar si se encuentra en la base de datos
-@cross_origin()
-def delete_tema():
-    content = repo.delete(int(request.json['id']))    
-    return jsonify(content)

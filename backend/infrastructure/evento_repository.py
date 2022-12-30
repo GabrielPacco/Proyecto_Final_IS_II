@@ -12,7 +12,7 @@ class EventoRepository:
     def get(self, id):
         params = {'id': id}
         rv = self.mysql_pool.execute("SELECT * FROM evento WHERE evento.idEvento = %(id)s", params)
-
+        
         # Obteniendo informacion del ponente
         ponente = repo_ponente.get(rv[0][1])
           
@@ -34,6 +34,7 @@ class EventoRepository:
     # Obtener todos los eventos
     def get_all(self):
         rv = self.mysql_pool.execute("SELECT * FROM Evento ORDER BY idEvento")
+        
         data = []
         content = {}
         for result in rv:
@@ -61,6 +62,7 @@ class EventoRepository:
         }
         query = "INSERT INTO evento(%(id)s, %(id_ponente)s, %(nombre)s, %(detalles)s, %(link)s)"
         self.mysql_pool.execute(query, params, commit=True)
+        
         data = {'result : 1'}
         return data
         
@@ -69,5 +71,6 @@ class EventoRepository:
         params = {'id' : id}      
         query = "DELETE FROM evento WHERE id = %(id)s"    
         self.mysql_pool.execute(query, params, commit=True)   
+        
         data = {'result': 1}
         return data

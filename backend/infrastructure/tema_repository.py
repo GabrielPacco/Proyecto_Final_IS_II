@@ -6,7 +6,8 @@ class TemaRepository:
 
     def get(self, id):
         params = {'id': id}
-        rv = self.mysql_pool.execute("SELECT * FROM tema WHERE tema.id = %(id)s", params)                
+        rv = self.mysql_pool.execute("SELECT * FROM tema WHERE tema.id = %(id)s", params)     
+        self.mysql_pool.close()           
         data = []
         content = {}
         for result in rv:
@@ -20,6 +21,7 @@ class TemaRepository:
 
     def get_all(self):
         rv = self.mysql_pool.execute("SELECT * FROM tema ORDER BY id")
+        self.mysql_pool.close()
         data = []
         content = {}
         for result in rv:
@@ -38,6 +40,7 @@ class TemaRepository:
         }
         query = "INSERT INTO tema(%(id)s, %(nombre)s)"
         self.mysql_pool.execute(query, params, commit=True)
+        self.mysql_pool.close()
         data = {'result : 1'}
         return data
         
@@ -45,5 +48,6 @@ class TemaRepository:
         params = {'id' : id}      
         query = "DELETE FROM tema WHERE id = %(id)s"    
         self.mysql_pool.execute(query, params, commit=True)   
+        self.mysql_pool.close()
         data = {'result': 1}
         return data

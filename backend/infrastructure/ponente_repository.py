@@ -7,6 +7,7 @@ class PonenteRepository:
     def get(self, id):
         params = {'id':id}
         rv = self.mysql_pool.execute("SELECT * FROM usuario u INNER JOIN ponente p on p.idPonente = u.idUsuario WHERE u.idUsuario = %(id)s", params)                
+        
         data = []
         content = {}
         for result in rv:
@@ -24,6 +25,7 @@ class PonenteRepository:
 
     def get_all(self):
         rv = self.mysql_pool.execute("SELECT * FROM usuario u INNER JOIN ponente p on p.idPonente = u.idUsuario ORDER BY idUsuario")
+        
         data = []
         content = {}
         for result in rv:
@@ -40,6 +42,7 @@ class PonenteRepository:
         return data
 
     def create(self, id, nombre, apellido, correo, numEventos, descripcion):
+        
         params = {
             'id' : id,
             'nombre' : nombre,
@@ -55,8 +58,10 @@ class PonenteRepository:
 
         
     def delete(self, id):
+        
         params = {'id' : id}      
         query = "DELETE FROM ponente WHERE id = %(id)s\nDELETE FROM usuario WHERE id = %(id)s"    
         self.mysql_pool.execute(query, params, commit=True)   
+        
         data = {'result': 1}
         return data

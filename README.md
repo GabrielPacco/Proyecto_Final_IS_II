@@ -157,3 +157,12 @@ Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un 
 La gestion de Issues se ha realizado directamente en Github. 
 
 ![alt text](Images/issues.png "Issues")
+
+## Integrantes (en orden alfabetico):
+
+-Diego Josue Aquino Quispe <br>
+-Erick Jesus Perez Chipa <br>
+-Gabriel Pacco Huaraca <br>
+-John Edson Sanchez Chilo <br>
+-Levi Joel Castillon Urquiza <br>
+-Ronald Romario Gutierrez Arratia  <br>

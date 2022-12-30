@@ -19,6 +19,35 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 
 ## Requisitos
 
+### - Register
+
+![alt text](Images/sign_up.png "Registrar")
+
+### - Crear eventos
+
+![alt text](Images/crear_evento_template.png "Crear evento")
+
+### - Ver nuevos eventos
+
+![alt text](Images/nuevos_eventos.png "Ver nuevos eventos")
+
+  
+## Github
+Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajado y se ha realizado integracion continua sobre la rama de **desarrollo** en la cual se realizan las diferentes pruebas tanto unitarias, funcionales, de rendimiento, de seguridad y el analisis estatico.
+
+![alt text](Images/github_branches.png "Github branches")
+
+## Pipeline en Jenkins
+Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
+![](https://live.staticflickr.com/65535/52594947084_80b4c8d511_b.jpg)
+
+
+## Construcción automática
+En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.
+
+![alt text](Images/requirements.png "Requirements")
+
+## Analisis Estático
 -SonarQube official Plugin <br>
 -SonarScanner Plugin <br>
 -Sonar Qube Server <br>

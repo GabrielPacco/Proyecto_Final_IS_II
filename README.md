@@ -71,7 +71,7 @@ En Python el tema de construcción automática no necesita de comandos específi
 
 ![](https://live.staticflickr.com/65535/52594725924_6f3d9e0c2a_b.jpg)
 
-## Elimincación de código comentado
+## Eliminación de código comentado
 
 ![](https://live.staticflickr.com/65535/52594898055_f2eca34e00_h.jpg)
 

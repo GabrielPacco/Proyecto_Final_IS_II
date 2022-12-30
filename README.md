@@ -55,6 +55,9 @@ Dentro de los cuales hemos usado los métodos de refactorización <br>
 ![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/pruebafuncional.png) <br>
 ![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/pruebafuncional2.png) <br>
 
+La prueba fue pasada con exito en el Selenium <br>
+![image](https://github.com/GabrielPacco/Proyecto_Final_IS_II/blob/ronald/Images/test_pruebaok.png) <br>
+
 ## Arquitectura del proyecto: 
 
 ### Interface

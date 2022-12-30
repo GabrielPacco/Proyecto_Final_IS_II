@@ -10,10 +10,6 @@ from flask_cors import CORS, cross_origin # para que no genere errores de CORS a
 
 from backend.blueprints.evento_blueprint import evento_blueprint
 from backend.blueprints.ponente_blueprint import ponente_blueprint
-
-from backend.models.evento import EventoModel
-from backend.models.ponente import PonenteModel
-
 app = Flask(__name__,template_folder='frontend/templates',static_folder='frontend/static')
 
 app.secret_key= "averysecretkey"
@@ -22,17 +18,16 @@ app.register_blueprint(evento_blueprint)
 app.register_blueprint(ponente_blueprint)
 
 cors = CORS(app)
+HOME = '/home'
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('index.html', eventos=response)
 
 
-@app.route('/home', methods=['GET','POST'])
+@app.route(HOME, methods=['GET','POST'])
 def home():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
-    print("respnjse",response)
     return render_template('home.html', eventos=response)
     
 @app.route('/login')
@@ -44,6 +39,7 @@ def validate_login():
     if request.method == 'POST':
         correo = request.form['typeEmailX']
         password = request.form['typePasswordX']
+        
         users=requests.post("http://127.0.0.1:5000/api/ponente/get_all").json()
         user={}
         for x in users:
@@ -68,8 +64,18 @@ def logout():
         session.pop('correo', None)
         return render_template('index.html')
 
-@app.route('/registro', methods=['GET'])
-def Registro():
+@app.route('/registro', methods=['GET','POST'])
+def registro():
+    if request.method == 'POST':
+        nombres = request.form['nombre']
+        apellidos = request.form['apellidos']
+        email = request.form['email']
+        query= {'id_ponente' : 2,
+        'nombres' : nombres,
+        'apellidos' : apellidos,
+        'email' : email}
+        requests.post("http://127.0.0.1:5000/api/asistente/create",json=query)
+        return render_template('home.html')
     return render_template('registrar.html')
 
 @app.route('/evento/<int:id>', methods=['GET'])
@@ -78,26 +84,47 @@ def evento(id):
     resp = requests.post("http://127.0.0.1:5000/api/evento/get", json=query).json()
     return render_template('evento.html', evento=resp)
 
+
 @app.route('/create_evento', methods=['GET','POST'])
 def create_evento():
     if request.method == 'POST':
-        query= {'id_ponente' : 2,
+        query= {
+        'id_ponente' : 2,
         'nombre' : request.form['evento_nombre'],
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
-        print(query)
-        #print(nombre)
-        resp = requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
-        print(resp)
-        return  redirect('/')
-
+        requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
+        return  redirect(HOME)
     return render_template('create_evento.html')
 
+
 @app.route('/profile/<int:id>', methods=['GET'])
-def Profile(id):
+def profile(id):
     query = {"id" : id}
     resp = requests.post("http://127.0.0.1:5000/api/ponente/get", json=query).json()
     return render_template('profile.html', ponente=resp)
+
+@app.route('/edit_evento/<int:id>', methods=['GET','POST'])
+def edit_evento(id):
+    if request.method == 'POST':
+        query= {
+        'id' : id,
+        'id_ponente' : 2,
+        'nombre' : request.form['evento_nombre'],
+        'detalles' : request.form['evento_detalles'],
+        'link' : request.form['evento_link']}
+        requests.post("http://127.0.0.1:5000/api/evento/edit",json=query)
+        return  redirect(HOME)
+
+    return render_template('edit_evento.html')
+
+
+@app.route('/delete_evento/<int:id>', methods=['GET','POST'])
+def delete_evento(id):
+    print(id)
+    query = {"id" : id}
+    requests.post("http://127.0.0.1:5000/api/evento/delete", json=query)
+    return redirect(HOME)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -18,13 +18,14 @@ app.register_blueprint(evento_blueprint)
 app.register_blueprint(ponente_blueprint)
 
 cors = CORS(app)
+HOME = '/home'
 
 @app.route('/', methods=['GET','POST'])
 def index():
     return render_template('index.html', eventos=response)
 
 
-@app.route('/home', methods=['GET','POST'])
+@app.route(HOME, methods=['GET','POST'])
 def home():
     response = requests.post("http://127.0.0.1:5000/api/evento/get_all").json()
     return render_template('home.html', eventos=response)
@@ -93,7 +94,7 @@ def create_evento():
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
         requests.post("http://127.0.0.1:5000/api/evento/create",json=query)
-        return  redirect('/home')
+        return  redirect(HOME)
     return render_template('create_evento.html')
 
 
@@ -113,7 +114,7 @@ def edit_evento(id):
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
         requests.post("http://127.0.0.1:5000/api/evento/edit",json=query)
-        return  redirect('/home')
+        return  redirect(HOME)
 
     return render_template('edit_evento.html')
 
@@ -123,7 +124,7 @@ def delete_evento(id):
     print(id)
     query = {"id" : id}
     requests.post("http://127.0.0.1:5000/api/evento/delete", json=query)
-    return redirect('/home')
+    return redirect(HOME)
 
 if __name__ == "__main__":
     app.run(debug=True)

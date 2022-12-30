@@ -55,7 +55,8 @@ Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajad
 
 ## Pipeline en Jenkins
 Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
-![alt text](Images/Pipeline_Jenkins/pipeline_jenkins.png "Pipeline jenkins")
+![](https://live.staticflickr.com/65535/52594190492_3b6d38e775_h.jpg)
+
 
 ## Construcción automática
 En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.

@@ -106,7 +106,7 @@ def Profile(id):
 #branch diego
 
 @app.route('/edit_evento/<int:id>', methods=['GET','POST'])
-def Edit_evento(id):
+def edit_evento(id):
     if request.method == 'POST':
         Query= {
         'id' : id,

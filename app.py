@@ -105,16 +105,16 @@ def Profile(id):
 
 #branch diego
 
-@app.route('/edit_evento', methods=['GET','POST'])
-def edit_evento():
+@app.route('/edit_evento/<int:id>', methods=['GET','POST'])
+def Edit_evento(i):
     if request.method == 'POST':
-        query= {
+        Query= {
         'id' : id,
         'id_ponente' : 2,
         'nombre' : request.form['evento_nombre'],
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
-        print(query)
+        print(Query)
         #print(nombre)
         resp = requests.post("http://127.0.0.1:5000/api/evento/edit",json=query)
         print(resp)

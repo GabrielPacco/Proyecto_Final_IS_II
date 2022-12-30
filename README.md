@@ -14,14 +14,26 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 -Selenium: Es un entorno de pruebas de software para aplicaciones basadas en la web. Selenium provee una herramienta de grabar/reproducir para crear pruebas sin usar un lenguaje de scripting para pruebas. <br>
 
 
-# Análisis Estático
+## Funcionalidades
+La pagina web presenta entre sus principales funcionalidades:
+
+### - Visualizar a traves de una interfaz grafica eventos relacionados a la computacion
+
+![alt text](Images/interfaz.PNG "Title")
+
+### - Obtener mas informacion de los eventos
+
+![alt text](Images/eventos.PNG "Title")
+
+### - Acceder a los perfiles de los ponentes
+
+![alt text](Images/perfil.PNG "Title")
 
 ### - Login
 
--SonarQube official Plugin <br>
--SonarScanner Plugin <br>
--Sonar Qube Server <br>
--sonar-project.properties <br>
+![alt text](Images/login.PNG "Login")
+
+
 
 ### - Register
 
@@ -37,14 +49,13 @@ Debido a los grandes avances y nuevas tecnologias relevantes para la sociedad de
 
   
 ## Github
-Se ha utilizado como repositorio fuente ... sobre el cual se ha trabajo.  
 Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajado y se ha realizado integracion continua sobre la rama de **desarrollo** en la cual se realizan las diferentes pruebas tanto unitarias, funcionales, de rendimiento, de seguridad y el analisis estatico.
 
 ![alt text](Images/github_branches.png "Github branches")
 
 ## Pipeline en Jenkins
 Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
-![alt text](Images/pipeline_jenkins.png "Pipeline jenkins")
+![alt text](Images/Pipeline_Jenkins/pipeline_jenkins.png "Pipeline jenkins")
 
 ## Construcción automática
 En Python el tema de construcción automática no necesita de comandos específicos, pero si requiere un archivo requirements.txt el cual gaurdara todas las librerias usadas para el proyecto. Es necesario que para usarlo de forma correcta se use docker o un entorno virtual en python, de manera que solo se almacenen las librerias necesarias.
@@ -52,6 +63,11 @@ En Python el tema de construcción automática no necesita de comandos específi
 ![alt text](Images/requirements.png "Requirements")
 
 ## Analisis Estático
+-SonarQube official Plugin <br>
+-SonarScanner Plugin <br>
+-Sonar Qube Server <br>
+-sonar-project.properties <br>
+
 ## Pruebas unitarias
 Para las pruebas unitarias se ha utilizado la librería de unittest
 Algunos ejemplos de test usados: 
@@ -68,6 +84,10 @@ Y este este es el resultado obtenido de haber corrido todos los test unitarios. 
 Para las pruebas funcionales se ha hecho uso de selenium  
 
 ![alt text](Images/test/test_create_evento_codigo.png "Test funcional create evento")
+
+![alt text](Images/pruebafuncional.png "Test funcional login")
+
+![alt text](Images/pruebafuncional2.png "Test funcional login")
 
 Y el resultado seria  
 

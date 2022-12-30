@@ -33,7 +33,7 @@ class TemaRepository:
             content = {}
         return data
 
-    def create(self, id, id_ponente, nombre, detalles, link):
+    def create(self, id, nombre):
         params = {
             'id' : id,
             'nombre' : nombre,

@@ -74,16 +74,16 @@ Para la pruebas de seguridad se ha hecho uso de Owasp zap
 Para esta sección usaremos la herramienta JMeter para hacer las pruebas de rendimiento en el proyecto. 
 
 Iniciamos un plan de pruebas, con grupos de hilos y su respectivo HTTP.
-![Config](img/jmeterlogin_peti.jpg)
+![Config](Images/jmeterlogin_peti.png)
 
-![Config](img/jmeter_AR.jpg)
+![Config](Images/jmeter_RA.png)
 
-![Config](img/jmeter_RA.jpg)
+![Config](Images/jmeter_AR.png)
 
 Al finalizar generar un HTTP report del proyecto en JMeter, el cual nos dara un informe completo de este. 
 
-![Config](img/report.png)
-![Config](img/report2.png)
+![Config](Images/report.png)
+![Config](Images/report2.png)
 
 
 ## Gestion de issues

@@ -48,7 +48,7 @@ create table listEvento(
 );
 
 create table Evento(
-	idEvento integer,
+	idEvento integer unique auto_increment,
     idPonente integer,
     idLista integer,
     nombre varchar(30),
@@ -196,4 +196,3 @@ call asiste(6,3);
 select * from asistente;
 select * from ponente;
 select * from usuario;
-

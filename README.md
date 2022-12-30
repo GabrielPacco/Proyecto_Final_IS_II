@@ -47,24 +47,12 @@ Para las pruebas funcionales se ha hecho uso de selenium
 ## Pruebas de seguridad
 Para la pruebas de seguridad se ha hecho uso de Owasp zap
 # Contenidos
-![image](Images/owasp1.png) 
-
-##Sobre el reporte
-![image](Images/owasp2.png) 
-
-##Sumario
-![image](Images/owasp3.png)
-![image](Images/owasp4.png)
-![image](Images/owasp5.png) 
-![image](Images/owasp6.png) 
-![image](Images/owasp7.png) 
-
-##Apendice
-![image](Images/owasp8.png)
-![image](Images/owasp9.png)
-![image](Images/owasp10.png)
-![image](Images/owasp11.png) 
-
+## Función Profile
+![Config](Images/pro.png)
+Vemos algunos warning, que nos aparecen en nuestra función profile, las cuales analizaremos con SonarLint: 
+![Config](Images/smells.png)
+En estas dos imágenes se nos indica un Code Smell, el cual debemos de corregir el cual se logra realizar y se obtiene el siguiente resultado:
+![Config](Images/pro_re.png)
 ## Pruebas de rendimiento
 ## Requisitos
 

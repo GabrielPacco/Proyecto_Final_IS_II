@@ -71,10 +71,20 @@ En Python el tema de construcción automática no necesita de comandos específi
 
 ## Antes del Refactoring
 
+## Previsualización del análisis de Sonar Scanner
 ![](https://live.staticflickr.com/65535/52594267137_3f144b21a3_c.jpg)
+## Vulnerabilidades
 ![](https://live.staticflickr.com/65535/52595272258_6e81ae3c25_c.jpg)
-![](https://live.staticflickr.com/65535/52594267137_3f144b21a3_c.jpg)
+## Code Smells
+![](https://live.staticflickr.com/65535/52595175725_83504e4f74_c.jpg)
+## Bugs
 ![](https://live.staticflickr.com/65535/52595175745_415ef6cc31_c.jpg)
+
+## Después del Refactoring
+
+![](https://live.staticflickr.com/65535/52594273667_ce499b1908_b.jpg)
+![](https://live.staticflickr.com/65535/52595018594_b94daf0183_b.jpg)
+
 
 ## Pruebas unitarias
 Para las pruebas unitarias se ha utilizado la librería de unittest

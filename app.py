@@ -108,13 +108,13 @@ def Profile(id):
 @app.route('/edit_evento/<int:id>', methods=['GET','POST'])
 def edit_evento(id):
     if request.method == 'POST':
-        Query= {
+        query= {
         'id' : id,
         'id_ponente' : 2,
         'nombre' : request.form['evento_nombre'],
         'detalles' : request.form['evento_detalles'],
         'link' : request.form['evento_link']}
-        requests.post("http://127.0.0.1:5000/api/evento/edit",json=Query)
+        requests.post("http://127.0.0.1:5000/api/evento/edit",json=query)
         return  redirect('/home')
 
     return render_template('edit_evento.html')

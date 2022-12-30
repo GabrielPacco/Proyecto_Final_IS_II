@@ -48,7 +48,7 @@ Para las pruebas funcionales se ha hecho uso de selenium
 Para la pruebas de seguridad se ha hecho uso de Owasp zap
 # Contenidos
 ## Función Profile
-![Config](Images/pro.png)
+![Config](Images/Pro.png)
 Vemos algunos warning, que nos aparecen en nuestra función profile, las cuales analizaremos con SonarLint: 
 ![Config](Images/smells.png)
 En estas dos imágenes se nos indica un Code Smell, el cual debemos de corregir el cual se logra realizar y se obtiene el siguiente resultado:

@@ -68,6 +68,9 @@ En Python el tema de construcción automática no necesita de comandos específi
 -Sonar Qube Server <br>
 -sonar-project.properties <br>
 
+![alt text](Images/sonar.png "Sonar")
+![alt text](Images/sonar_reporte.png "Sonar Reporte")
+
 ## Pruebas unitarias
 Para las pruebas unitarias se ha utilizado la librería de unittest
 Algunos ejemplos de test usados: 

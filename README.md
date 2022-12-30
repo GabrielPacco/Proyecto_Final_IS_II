@@ -55,7 +55,7 @@ Cada integrante ha creado su propia rama con su nombre sobre la cual ha trabajad
 
 ## Pipeline en Jenkins
 Para realizar el procedimiento completo de integración continua es necesario trabajar con Jenkins. Por ello se ha creado un pipeline con el siguiente script
-![](https://live.staticflickr.com/65535/52594682176_e4b603b994_h.jpg)
+![](https://live.staticflickr.com/65535/52594947084_80b4c8d511_b.jpg)
 
 
 ## Construcción automática
